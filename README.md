@@ -16,7 +16,7 @@
 
 ---
 
-## Быстрая установка
+## Установка
 
 Склонируйте репозиторий проекта:
 
@@ -77,13 +77,13 @@ npx cap add android
 iOS:
 
 ```bash
-cp native-config/Info.plist ios/App/App/Info.plist
+cp native_config/Info.plist ios/App/App/Info.plist
 ```
 
 Android:
 
 ```bash
-cp native-config/AndroidManifest.xml android/app/src/main/AndroidManifest.xml
+cp native_config/AndroidManifest.xml android/app/src/main/AndroidManifest.xml
 ```
 
 ---
