@@ -5,14 +5,19 @@
   "main": "index.html",
   "scripts": {
     "build": "mkdir -p dist && cp index.html app.js dist/",
-    "serve": "python3 -m http.server 8000"
+    "serve": "python3 -m http.server 8000",
+    "patch-native": "node scripts/patch-native.js",
+    "postcapadd": "npm run patch-native",
+    "postsync": "npm run patch-native"
   },
   "devDependencies": {
     "@capacitor/android": "^7.4.3",
     "@capacitor/assets": "^3.0.5",
     "@capacitor/cli": "^7.4.3",
     "@capacitor/core": "^7.4.3",
-    "@capacitor/ios": "^7.4.3"
+    "@capacitor/ios": "^7.4.3",
+    "plist": "^3.1.0",
+    "xml2js": "^0.6.2"
   },
   "dependencies": {
     "@capacitor/action-sheet": "^7.0.2",
