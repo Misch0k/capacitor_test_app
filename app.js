@@ -156,6 +156,13 @@ class CapacitorTestApp {
     async showNativeNotification(title, message) {
         if (typeof Capacitor !== 'undefined' && Capacitor.isPluginAvailable('LocalNotifications')) {
             try {
+                const permission = await Capacitor.Plugins.LocalNotifications.requestPermissions();
+                
+                if (permission.display !== 'granted') {
+                    this.addResult('❌ Разрешение на уведомления не предоставлено');
+                    return;
+                }
+
                 await Capacitor.Plugins.LocalNotifications.schedule({
                     notifications: [
                         {
