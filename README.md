@@ -18,9 +18,21 @@
 
 ## Быстрая установка
 
+Склонируйте репозиторий проекта:
+
 ```bash
 git clone https://github.com/Misch0k/capacitor_test_app.git
+```
+
+Перейдите в директорию проекта:
+
+```bash
 cd capacitor_test_app
+```
+
+Установите зависимости:
+
+```bash
 npm install
 ```
 
@@ -44,21 +56,35 @@ npx cap sync
 
 ## Установка платформ (если ещё не добавлены)
 
+iOS:
+
+```bash
+npx cap add ios
+```
+
+Android:
+
 ```bash
 npx cap add android
-npx cap add ios
 ```
 
 ---
 
-## Запуск на Android
+## Настройка разрешений
 
-1. Откройте проект в Android Studio:
+Поскольку `Info.plist` (iOS) и `AndroidManifest.xml` (Android) создаются локально при добавлении платформ, для настройки разрешений в директории проекта выполните следующие команды:
 
-   ```bash
-   npx cap open android
-   ```
-2. Соберите и запустите приложение на эмуляторе или физическом устройстве.
+iOS:
+
+```bash
+cp native-config/Info.plist ios/App/App/Info.plist
+```
+
+Android:
+
+```bash
+cp native-config/AndroidManifest.xml android/app/src/main/AndroidManifest.xml
+```
 
 ---
 
@@ -74,14 +100,14 @@ npx cap add ios
 
 ---
 
-## Настройка разрешений
+## Запуск на Android
 
-Поскольку `Info.plist` (iOS) и `AndroidManifest.xml` (Android) создаются локально при добавлении платформ, для настройки разрешений в директории проекта выполните следующие команды:
+1. Откройте проект в Android Studio:
 
-```bash
-cp native-config/Info.plist ios/App/App/Info.plist
-cp native-config/AndroidManifest.xml android/app/src/main/AndroidManifest.xml
-```
+   ```bash
+   npx cap open android
+   ```
+2. Соберите и запустите приложение на эмуляторе или физическом устройстве.
 
 ---
 
@@ -97,19 +123,23 @@ cp native-config/AndroidManifest.xml android/app/src/main/AndroidManifest.xml
   ```bash
   npx cap sync
   ```
-* Добавить платформу:
+* Добавить платформу iOS:
 
   ```bash
   npx cap add ios
-  npx cap add android
   ```
-* Открыть Android Studio:
+  * Добавить платформу Android:
 
   ```bash
-  npx cap open android
+  npx cap add android
   ```
 * Открыть Xcode:
 
   ```bash
   npx cap open ios
+  ```
+* Открыть Android Studio:
+
+  ```bash
+  npx cap open android
   ```
