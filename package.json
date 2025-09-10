@@ -1,0 +1,31 @@
+{
+  "name": "capacitor-test-app",
+  "version": "1.0.0",
+  "description": "Тестовое приложение для проверки Capacitor",
+  "main": "index.html",
+  "scripts": {
+    "build": "mkdir -p dist && cp index.html app.js dist/",
+    "serve": "python3 -m http.server 8000"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^7.4.3",
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/ios": "^7.4.3"
+  },
+  "dependencies": {
+    "@capacitor/action-sheet": "^7.0.2",
+    "@capacitor/app": "^7.1.0",
+    "@capacitor/browser": "^7.0.2",
+    "@capacitor/camera": "^7.0.2",
+    "@capacitor/geolocation": "^7.1.5",
+    "@capacitor/local-notifications": "^7.0.2",
+    "@capacitor/network": "^7.0.2",
+    "@capacitor/share": "^7.0.2",
+    "@capacitor/splash-screen": "^7.0.3",
+    "@capacitor/toast": "^7.0.2",
+    "@ionic-native/in-app-browser": "^5.36.0",
+    "cordova-plugin-inappbrowser": "^6.0.0"
+  }
+}

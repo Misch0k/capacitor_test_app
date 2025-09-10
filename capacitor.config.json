@@ -1,0 +1,29 @@
+{
+  "appId": "com.example.capacitorapp",
+  "appName": "Capacitor Test App",
+  "webDir": "dist",
+  "ios": {
+    "scheme": "capacitortest"
+  },
+  "android": {
+    "scheme": "capacitortest"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 3000,
+      "launchAutoHide": true,
+      "backgroundColor": "#000000",
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": true,
+      "androidSpinnerStyle": "large",
+      "iosSpinnerStyle": "small",
+      "spinnerColor": "#ffffff",
+      "splashFullScreen": true,
+      "splashImmersive": true
+    },
+    "App": {
+      "launchUrl": "capacitortest://home"
+    }
+  }
+}
